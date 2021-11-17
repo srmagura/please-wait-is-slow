@@ -19,16 +19,19 @@
     </style>
   </head>
   <body>
-
       <script src="./please-wait.min.js"></script>
       <script>
+        var startDate = new Date()
+
         var loadingScreen = pleaseWait({
           logo: "https://1000logos.net/wp-content/uploads/2021/04/Chrome-logo.png",
           backgroundColor: "lemonchiffon",
           loadingHtml: `<span>Loading...</span>`,
         });
 
-        loadingScreen.finish()
+        loadingScreen.finish(false, () => {
+            console.log(`Loading screen visible for ${new Date() - startDate} ms.`)
+        })
       </script>
 
       <h1>Page content goes here</h1>
