@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>please-wait-is-slow</title>
+
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="./please-wait.css"
+    />
+
+    <style>
+        img {
+            width: 200px;
+        }
+    </style>
+  </head>
+  <body>
+
+      <script src="./please-wait.min.js"></script>
+      <script>
+        var loadingScreen = pleaseWait({
+          logo: "https://1000logos.net/wp-content/uploads/2021/04/Chrome-logo.png",
+          backgroundColor: "lemonchiffon",
+          loadingHtml: `<span>Loading...</span>`,
+        });
+
+        loadingScreen.finish()
+      </script>
+
+      <h1>Page content goes here</h1>
+    </div>
+  </body>
+</html>
